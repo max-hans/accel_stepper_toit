@@ -5,7 +5,7 @@ import .types show MotorInterfaceType Direction
 import gpio
 
 class AccelStepper:
-  _stepper_interface /MotorInterfaceType := ?  
+  _stepper_interface /int := ?  
   _pins /List := ?
   _pin-inverted /List := []
   _current-pos /int := 0
@@ -29,7 +29,7 @@ class AccelStepper:
 
   _direction /int := ?
   
-  constructor stepper_interface/MotorInterfaceType  pins/List  enable/bool = true:
+  constructor stepper_interface/int  pins/List  enable/bool = true:
 
     _stepper_interface = stepper_interface
     _current_pos = 0
